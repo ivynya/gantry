@@ -12,13 +12,21 @@
 
 	let example: { [id: string]: string } = {
 		id: 'string',
-		name: 'string'
+		name: 'string',
+		description: 'string',
+		longDescription: 'string',
+		startDate: 'string',
+		endDate: 'string',
+		tags: 'array',
+		type: 'array'
 	};
 </script>
 
 <main>
 	<section>
-		<button on:click={add}>Add Item</button>
+		<button on:click={add}>New Item</button>
+		<button>Restore JSON</button>
+		<button>Edit Schema</button>
 		<p>hi</p>
 		{#each array as item, i}
 			<p on:click={() => (view = i)}>{i}: {JSON.stringify(item)}</p>
@@ -43,10 +51,18 @@
 	main {
 		display: flex;
 		column-gap: 20px;
+		justify-content: space-between;
 		padding: 30px;
 	}
 	section {
 		flex: 1 1;
+		max-width: 30%;
+	}
+	p {
+		max-width: 100%;
+		text-overflow: ellipsis;
+		overflow: hidden;
+		white-space: nowrap;
 	}
 	button {
 		padding: 10px 30px;
