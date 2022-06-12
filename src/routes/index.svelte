@@ -20,6 +20,10 @@
 		tags: 'array',
 		type: 'array'
 	};
+
+	function x(ev, v, e, i) {
+		array[view][Object.keys(example)[i]] = ev.target.value.split(',');
+	}
 </script>
 
 <main>
@@ -38,6 +42,9 @@
 			<p>{key}</p>
 			{#if example[key] === 'string'}
 				<input type="text" bind:value={array[view][Object.keys(example)[i]]} />
+			{/if}
+			{#if example[key] === 'array'}
+				<input type="text" on:change={(e) => x(e, view, example, i)} />
 			{/if}
 		{/each}
 	</section>
