@@ -19,21 +19,29 @@
 </script>
 
 <section>
-	<h2>Viewing Item: {view}</h2>
+	<h2>Editing Item: <b>{view}</b></h2>
 	{#each Object.keys(example) as key, i}
-		<p>{key}</p>
-		{#if example[key] === 'string'}
-			<input type="text" bind:value={array[view][Object.keys(example)[i]]} />
-		{/if}
-		{#if example[key] === 'array'}
-			<input type="text" on:change={(e) => x(e, view, example, i)} />
-		{/if}
+		<div>
+			<label for="">{key}</label>
+			{#if example[key] === 'string'}
+				<input type="text" bind:value={array[view][Object.keys(example)[i]]} />
+			{/if}
+			{#if example[key] === 'array'}
+				<input type="text" on:change={(e) => x(e, view, example, i)} />
+			{/if}
+		</div>
 	{/each}
 </section>
 
 <style>
-	section {
-		flex: 1 1;
-		max-width: 30%;
+	label {
+		display: block;
+		margin-bottom: 5px;
+	}
+	div {
+		margin-bottom: 10px;
+	}
+	input {
+		width: 100%;
 	}
 </style>

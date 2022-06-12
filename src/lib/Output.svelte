@@ -9,10 +9,6 @@
 </section>
 
 <style>
-	section {
-		flex: 1 1;
-		max-width: 30%;
-	}
 	textarea {
 		min-height: 300px;
 		width: 100%;

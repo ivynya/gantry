@@ -16,7 +16,6 @@
 <style>
 	main {
 		display: flex;
-		column-gap: 20px;
 		justify-content: space-between;
 		padding: 30px;
 	}
