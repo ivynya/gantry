@@ -1,5 +1,6 @@
+import { writable } from "svelte/store";
 
-export let example: { [id: string]: string } = {
+export let example = writable({
   id: 'string',
   name: 'string',
   description: 'string',
@@ -8,4 +9,4 @@ export let example: { [id: string]: string } = {
   endDate: 'string',
   tags: 'array',
   type: 'array'
-};
+});

@@ -22,7 +22,6 @@
 	<h2>View</h2>
 	<button on:click={add}>New Item</button>
 	<button on:click={restore}>Restore From Clipboard</button>
-	<button>Edit Schema</button>
 	<hr />
 	<span>Select view property:</span>
 	<select bind:value={prop}>

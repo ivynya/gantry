@@ -9,7 +9,8 @@
 		max-width: calc(26vw);
 		width: 100%;
 	}
-	h2 {
+	h2,
+	h3 {
 		text-transform: uppercase;
 		font-weight: 300;
 		letter-spacing: 3px;
