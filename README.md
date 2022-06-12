@@ -22,5 +22,16 @@ Gantry has the following issues that don't impact me.
 
 PRs are welcome for these issues (and others, if you want).
 
+## Gallery
+
+App View:
+
+<img width="500" alt="image" src="https://user-images.githubusercontent.com/35588499/173224279-afde821b-1258-4554-a9b3-a4390d9c2014.png">
+
+Demo of Property Title Filter:
+
+<img width="309" alt="image" src="https://user-images.githubusercontent.com/35588499/173224297-4f34b0c7-ebc6-4038-9f57-64f667a33ba8.png">
+
+
 ## License
 MIT
