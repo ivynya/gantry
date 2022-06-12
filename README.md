@@ -9,6 +9,7 @@ It probably won't really ever be fixed by me. See #Contributing.
 - Editable properties (which are all strings)
 - Editable arrays (which are all string arrays)
 - Editable schema (between strings and string arrays)
+- Restore JSON list from clipboard
 
 ## Contributing
 
