@@ -11,6 +11,9 @@ const config = {
 		adapter: adapter(),
 		prerender: {
 			default: true
+		},
+		paths: {
+			base: '/gantry'
 		}
 	}
 };
