@@ -13,5 +13,6 @@
 		min-height: 300px;
 		width: 100%;
 		resize: vertical;
+		text-transform: none;
 	}
 </style>
