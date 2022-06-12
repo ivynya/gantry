@@ -8,12 +8,18 @@
 		array = array;
 		console.log(array);
 	};
+
+	const restore = () => {
+		try {
+			navigator.clipboard.readText().then((t) => (array = JSON.parse(t)));
+		} catch (e) {}
+	};
 </script>
 
 <section>
 	<h2>View</h2>
 	<button on:click={add}>New Item</button>
-	<button>Restore From Clipboard</button>
+	<button on:click={restore}>Restore From Clipboard</button>
 	<button>Edit Schema</button>
 	<hr />
 	<br />
