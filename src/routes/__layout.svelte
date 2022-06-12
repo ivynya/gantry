@@ -14,24 +14,23 @@
 		font-weight: 300;
 		letter-spacing: 3px;
 	}
+	button,
 	input,
 	select,
 	textarea {
-		border: 1px solid grey;
+		appearance: none;
+		border: 1px solid slategray;
 		border-radius: 3px;
 		box-sizing: border-box;
 		font-family: inherit;
-		font-size: inherit;
+		font-size: 0.6rem;
+		letter-spacing: 1px;
+		text-transform: uppercase;
 		margin: 0;
 		padding: 2px 10px;
 	}
 	button {
 		background-color: transparent;
-		border: 1px solid slategray;
-		border-radius: 3px;
-		font-family: inherit;
-		letter-spacing: 1px;
-		text-transform: uppercase;
 	}
 	button:hover {
 		background-color: slategray;

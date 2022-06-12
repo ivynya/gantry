@@ -2,10 +2,16 @@
 	export let active: boolean;
 	export let item: any;
 	export let i: number;
+	export let key: string;
 </script>
 
 <button on:click class:active>
-	<b>{i}</b>: {JSON.stringify(item)}
+	<b>{i}</b>:
+	{#if key === 'gantry--default'}
+		{JSON.stringify(item)}
+	{:else}
+		{JSON.stringify(item[key])}
+	{/if}
 </button>
 
 <style>

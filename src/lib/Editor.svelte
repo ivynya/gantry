@@ -36,6 +36,8 @@
 		margin-bottom: 10px;
 	}
 	input {
+		font-size: 1rem;
+		text-transform: none;
 		width: 100%;
 	}
 </style>
