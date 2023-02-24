@@ -12,7 +12,7 @@
 	<h2>JSON Output</h2>
 	<textarea bind:value={json} />
 	<br /><br />
-	<h2>Modify Schema</h2>
+	<h2>View Schema</h2>
 	{#each properties as prop}
 	<div class="property">
 		<input type="text" name="sc-name-1" id="sc-name-1" placeholder="Property Name" value={prop.name}>
