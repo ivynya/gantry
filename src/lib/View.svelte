@@ -23,14 +23,13 @@
 	<button on:click={add}>New Item</button>
 	<button on:click={webRestore}>Restore From Catalog</button>
 	<hr />
-	<span>Select view property:</span>
+	<span>View by:</span>
 	<select bind:value={prop}>
 		<option value={-1}>Stringify</option>
 		{#each Object.keys(array[0]) as key, i}
 			<option value={i}>{key}</option>
 		{/each}
 	</select>
-	<br />
 	{#each array as item, i}
 		<ViewItem on:click={() => (view = i)} bind:item {i} active={view === i} {key} />
 	{/each}
