@@ -11,17 +11,17 @@
 		console.log(array);
 	};
 
-	const restore = () => {
-		try {
-			navigator.clipboard.readText().then((t) => (array = JSON.parse(t)));
-		} catch (e) {}
-	};
+	const webRestore = async () => {
+		const res = await fetch("https://portfolio-i362f.ondigitalocean.app/api/portfolio/catalog");
+		const data = await res.json();
+		array = data;
+	}
 </script>
 
 <section>
 	<h2>View</h2>
 	<button on:click={add}>New Item</button>
-	<button on:click={restore}>Restore From Clipboard</button>
+	<button on:click={webRestore}>Restore From Catalog</button>
 	<hr />
 	<span>Select view property:</span>
 	<select bind:value={prop}>
