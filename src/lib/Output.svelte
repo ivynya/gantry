@@ -4,21 +4,25 @@
 
 	// Generate output
 	$: json = JSON.stringify(array, null, 2);
-	$: rss = array.map((item) => {
-		return `
+	$: rss = `
 <?xml version="1.0" encoding="UTF-8" ?>
 <rss version="2.0">
 
 <channel>
 	<title>Ivy Direct</title>
 	<link>https://ivy.direct</link>
-	<description>The latest updates, work, and more from Ivy's engineering portfolio.</description>` + `
+	<description>The latest updates, work, and more from Ivy's engineering portfolio.</description>` + 
+array.map((item) => { return `
 	<item>
 		<title>${item.name}</title>
+		<guid>${item.id}</guid>
 		<link>https://work.ivy.direct/project/${item.id}</link>
+		<source>https://work.ivy.direct/project/${item.id}</source>
 		<description>${item.descriptionLong || item.description}</description>
 	</item>`;
-	}).join('') + `</channel></rss>`;
+}).join('') +
+`</channel>
+</rss>`;
 
 	$: properties = Object.keys($example).map((key) => {
 		return { name: key, type: $example[key] };
