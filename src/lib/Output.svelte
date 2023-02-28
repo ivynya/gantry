@@ -1,7 +1,24 @@
 <script lang="ts">
 	import { example } from '$lib/Skiff/schema';
 	export let array: any[];
-	$: json = JSON.stringify(array);
+
+	// Generate output
+	$: json = JSON.stringify(array, null, 2);
+	$: rss = array.map((item) => {
+		return `
+<?xml version="1.0" encoding="UTF-8" ?>
+<rss version="2.0">
+
+<channel>
+	<title>Ivy Direct</title>
+	<link>https://ivy.direct</link>
+	<description>The latest updates, work, and more from Ivy's engineering portfolio.</description>` + `
+	<item>
+		<title>${item.name}</title>
+		<link>https://work.ivy.direct/project/${item.id}</link>
+		<description>${item.descriptionLong || item.description}</description>
+	</item>`;
+	}).join('') + `</channel></rss>`;
 
 	$: properties = Object.keys($example).map((key) => {
 		return { name: key, type: $example[key] };
@@ -11,7 +28,8 @@
 <section>
 	<h2>JSON Output</h2>
 	<textarea bind:value={json} />
-	<br /><br />
+	<h2>RSS Output</h2>
+	<textarea bind:value={rss} />
 	<h2>View Schema</h2>
 	{#each properties as prop}
 	<div class="property">
@@ -27,7 +45,7 @@
 
 <style>
 	textarea {
-		min-height: 300px;
+		min-height: 150px;
 		width: 100%;
 		resize: vertical;
 		text-transform: none;
