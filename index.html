@@ -7,12 +7,12 @@
 		<link rel="stylesheet" href="https://use.typekit.net/src8spu.css">
 		<meta http-equiv="content-security-policy" content="">
 	<link rel="stylesheet" href="/gantry/_app/immutable/assets/pages/__layout.svelte-2828db6b.css">
-	<link rel="stylesheet" href="/gantry/_app/immutable/assets/pages/index.svelte-7a55e8b6.css">
-	<link rel="modulepreload" href="/gantry/_app/immutable/start-2b0db2f6.js">
+	<link rel="stylesheet" href="/gantry/_app/immutable/assets/pages/index.svelte-4c5f5e5d.css">
+	<link rel="modulepreload" href="/gantry/_app/immutable/start-cd187c36.js">
 	<link rel="modulepreload" href="/gantry/_app/immutable/chunks/index-88db943d.js">
 	<link rel="modulepreload" href="/gantry/_app/immutable/chunks/index-11897261.js">
 	<link rel="modulepreload" href="/gantry/_app/immutable/pages/__layout.svelte-e8c80aca.js">
-	<link rel="modulepreload" href="/gantry/_app/immutable/pages/index.svelte-a243f217.js">
+	<link rel="modulepreload" href="/gantry/_app/immutable/pages/index.svelte-55674010.js">
 	</head>
 	<body>
 		<div>
@@ -71,44 +71,61 @@
 		</div>
 </section>
 	<section><h2>JSON Output</h2>
-	<textarea class="svelte-1t9ol7f">[{"id":1}]</textarea>
-	<br><br>
+	<textarea class="svelte-x11mmw">[
+  {
+    "id": 1
+  }
+]</textarea>
+	<h2>RSS Output</h2>
+	<textarea class="svelte-x11mmw">
+<?xml version="1.0" encoding="UTF-8" ?>
+<rss version="2.0">
+
+<channel>
+	<title>Ivy Direct</title>
+	<link>https://ivy.direct</link>
+	<description>The latest updates, work, and more from Ivy's engineering portfolio.</description>
+	<item>
+		<title>undefined</title>
+		<link>https://work.ivy.direct/project/1</link>
+		<description>undefined</description>
+	</item></channel></rss></textarea>
 	<h2>View Schema</h2>
-	<div class="property svelte-1t9ol7f"><input type="text" name="sc-name-1" id="sc-name-1" placeholder="Property Name" value="id" class="svelte-1t9ol7f">
-		<select name="sc-type-1" id="sc-type-1" value="string" class="svelte-1t9ol7f"><option value="string">String</option><option value="boolean">Bool</option><option value="array">Array</option></select>
-	</div><div class="property svelte-1t9ol7f"><input type="text" name="sc-name-1" id="sc-name-1" placeholder="Property Name" value="name" class="svelte-1t9ol7f">
-		<select name="sc-type-1" id="sc-type-1" value="string" class="svelte-1t9ol7f"><option value="string">String</option><option value="boolean">Bool</option><option value="array">Array</option></select>
-	</div><div class="property svelte-1t9ol7f"><input type="text" name="sc-name-1" id="sc-name-1" placeholder="Property Name" value="organization" class="svelte-1t9ol7f">
-		<select name="sc-type-1" id="sc-type-1" value="string" class="svelte-1t9ol7f"><option value="string">String</option><option value="boolean">Bool</option><option value="array">Array</option></select>
-	</div><div class="property svelte-1t9ol7f"><input type="text" name="sc-name-1" id="sc-name-1" placeholder="Property Name" value="description" class="svelte-1t9ol7f">
-		<select name="sc-type-1" id="sc-type-1" value="string" class="svelte-1t9ol7f"><option value="string">String</option><option value="boolean">Bool</option><option value="array">Array</option></select>
-	</div><div class="property svelte-1t9ol7f"><input type="text" name="sc-name-1" id="sc-name-1" placeholder="Property Name" value="descriptionLong" class="svelte-1t9ol7f">
-		<select name="sc-type-1" id="sc-type-1" value="string" class="svelte-1t9ol7f"><option value="string">String</option><option value="boolean">Bool</option><option value="array">Array</option></select>
-	</div><div class="property svelte-1t9ol7f"><input type="text" name="sc-name-1" id="sc-name-1" placeholder="Property Name" value="startDate" class="svelte-1t9ol7f">
-		<select name="sc-type-1" id="sc-type-1" value="string" class="svelte-1t9ol7f"><option value="string">String</option><option value="boolean">Bool</option><option value="array">Array</option></select>
-	</div><div class="property svelte-1t9ol7f"><input type="text" name="sc-name-1" id="sc-name-1" placeholder="Property Name" value="endDate" class="svelte-1t9ol7f">
-		<select name="sc-type-1" id="sc-type-1" value="string" class="svelte-1t9ol7f"><option value="string">String</option><option value="boolean">Bool</option><option value="array">Array</option></select>
-	</div><div class="property svelte-1t9ol7f"><input type="text" name="sc-name-1" id="sc-name-1" placeholder="Property Name" value="tags" class="svelte-1t9ol7f">
-		<select name="sc-type-1" id="sc-type-1" value="array" class="svelte-1t9ol7f"><option value="string">String</option><option value="boolean">Bool</option><option value="array">Array</option></select>
-	</div><div class="property svelte-1t9ol7f"><input type="text" name="sc-name-1" id="sc-name-1" placeholder="Property Name" value="license" class="svelte-1t9ol7f">
-		<select name="sc-type-1" id="sc-type-1" value="array" class="svelte-1t9ol7f"><option value="string">String</option><option value="boolean">Bool</option><option value="array">Array</option></select>
-	</div><div class="property svelte-1t9ol7f"><input type="text" name="sc-name-1" id="sc-name-1" placeholder="Property Name" value="pastPositions" class="svelte-1t9ol7f">
-		<select name="sc-type-1" id="sc-type-1" value="array" class="svelte-1t9ol7f"><option value="string">String</option><option value="boolean">Bool</option><option value="array">Array</option></select>
-	</div><div class="property svelte-1t9ol7f"><input type="text" name="sc-name-1" id="sc-name-1" placeholder="Property Name" value="display" class="svelte-1t9ol7f">
-		<select name="sc-type-1" id="sc-type-1" value="string" class="svelte-1t9ol7f"><option value="string">String</option><option value="boolean">Bool</option><option value="array">Array</option></select>
-	</div><div class="property svelte-1t9ol7f"><input type="text" name="sc-name-1" id="sc-name-1" placeholder="Property Name" value="old" class="svelte-1t9ol7f">
-		<select name="sc-type-1" id="sc-type-1" value="boolean" class="svelte-1t9ol7f"><option value="string">String</option><option value="boolean">Bool</option><option value="array">Array</option></select>
-	</div><div class="property svelte-1t9ol7f"><input type="text" name="sc-name-1" id="sc-name-1" placeholder="Property Name" value="type" class="svelte-1t9ol7f">
-		<select name="sc-type-1" id="sc-type-1" value="array" class="svelte-1t9ol7f"><option value="string">String</option><option value="boolean">Bool</option><option value="array">Array</option></select>
+	<div class="property svelte-x11mmw"><input type="text" name="sc-name-1" id="sc-name-1" placeholder="Property Name" value="id" class="svelte-x11mmw">
+		<select name="sc-type-1" id="sc-type-1" value="string" class="svelte-x11mmw"><option value="string">String</option><option value="boolean">Bool</option><option value="array">Array</option></select>
+	</div><div class="property svelte-x11mmw"><input type="text" name="sc-name-1" id="sc-name-1" placeholder="Property Name" value="name" class="svelte-x11mmw">
+		<select name="sc-type-1" id="sc-type-1" value="string" class="svelte-x11mmw"><option value="string">String</option><option value="boolean">Bool</option><option value="array">Array</option></select>
+	</div><div class="property svelte-x11mmw"><input type="text" name="sc-name-1" id="sc-name-1" placeholder="Property Name" value="organization" class="svelte-x11mmw">
+		<select name="sc-type-1" id="sc-type-1" value="string" class="svelte-x11mmw"><option value="string">String</option><option value="boolean">Bool</option><option value="array">Array</option></select>
+	</div><div class="property svelte-x11mmw"><input type="text" name="sc-name-1" id="sc-name-1" placeholder="Property Name" value="description" class="svelte-x11mmw">
+		<select name="sc-type-1" id="sc-type-1" value="string" class="svelte-x11mmw"><option value="string">String</option><option value="boolean">Bool</option><option value="array">Array</option></select>
+	</div><div class="property svelte-x11mmw"><input type="text" name="sc-name-1" id="sc-name-1" placeholder="Property Name" value="descriptionLong" class="svelte-x11mmw">
+		<select name="sc-type-1" id="sc-type-1" value="string" class="svelte-x11mmw"><option value="string">String</option><option value="boolean">Bool</option><option value="array">Array</option></select>
+	</div><div class="property svelte-x11mmw"><input type="text" name="sc-name-1" id="sc-name-1" placeholder="Property Name" value="startDate" class="svelte-x11mmw">
+		<select name="sc-type-1" id="sc-type-1" value="string" class="svelte-x11mmw"><option value="string">String</option><option value="boolean">Bool</option><option value="array">Array</option></select>
+	</div><div class="property svelte-x11mmw"><input type="text" name="sc-name-1" id="sc-name-1" placeholder="Property Name" value="endDate" class="svelte-x11mmw">
+		<select name="sc-type-1" id="sc-type-1" value="string" class="svelte-x11mmw"><option value="string">String</option><option value="boolean">Bool</option><option value="array">Array</option></select>
+	</div><div class="property svelte-x11mmw"><input type="text" name="sc-name-1" id="sc-name-1" placeholder="Property Name" value="tags" class="svelte-x11mmw">
+		<select name="sc-type-1" id="sc-type-1" value="array" class="svelte-x11mmw"><option value="string">String</option><option value="boolean">Bool</option><option value="array">Array</option></select>
+	</div><div class="property svelte-x11mmw"><input type="text" name="sc-name-1" id="sc-name-1" placeholder="Property Name" value="license" class="svelte-x11mmw">
+		<select name="sc-type-1" id="sc-type-1" value="array" class="svelte-x11mmw"><option value="string">String</option><option value="boolean">Bool</option><option value="array">Array</option></select>
+	</div><div class="property svelte-x11mmw"><input type="text" name="sc-name-1" id="sc-name-1" placeholder="Property Name" value="pastPositions" class="svelte-x11mmw">
+		<select name="sc-type-1" id="sc-type-1" value="array" class="svelte-x11mmw"><option value="string">String</option><option value="boolean">Bool</option><option value="array">Array</option></select>
+	</div><div class="property svelte-x11mmw"><input type="text" name="sc-name-1" id="sc-name-1" placeholder="Property Name" value="display" class="svelte-x11mmw">
+		<select name="sc-type-1" id="sc-type-1" value="string" class="svelte-x11mmw"><option value="string">String</option><option value="boolean">Bool</option><option value="array">Array</option></select>
+	</div><div class="property svelte-x11mmw"><input type="text" name="sc-name-1" id="sc-name-1" placeholder="Property Name" value="old" class="svelte-x11mmw">
+		<select name="sc-type-1" id="sc-type-1" value="boolean" class="svelte-x11mmw"><option value="string">String</option><option value="boolean">Bool</option><option value="array">Array</option></select>
+	</div><div class="property svelte-x11mmw"><input type="text" name="sc-name-1" id="sc-name-1" placeholder="Property Name" value="type" class="svelte-x11mmw">
+		<select name="sc-type-1" id="sc-type-1" value="array" class="svelte-x11mmw"><option value="string">String</option><option value="boolean">Bool</option><option value="array">Array</option></select>
 	</div>
 </section>
 </main>
 
 
-		<script type="module" data-sveltekit-hydrate="aomlay">
-		import { start } from "/gantry/_app/immutable/start-2b0db2f6.js";
+		<script type="module" data-sveltekit-hydrate="1n94evw">
+		import { start } from "/gantry/_app/immutable/start-cd187c36.js";
 		start({
-			target: document.querySelector('[data-sveltekit-hydrate="aomlay"]').parentNode,
+			target: document.querySelector('[data-sveltekit-hydrate="1n94evw"]').parentNode,
 			paths: {"base":"/gantry","assets":"/gantry"},
 			session: {},
 			route: true,
