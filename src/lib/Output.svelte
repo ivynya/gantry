@@ -4,8 +4,8 @@
 
 	// Generate output
 	$: json = JSON.stringify(array, null, 2);
-	$: rss = `
-<?xml version="1.0" encoding="UTF-8" ?>
+	$: rss =
+`<?xml version="1.0" encoding="UTF-8" ?>
 <rss version="2.0">
 
 <channel>
@@ -17,7 +17,7 @@ array.map((item) => { return `
 		<title>${item.name}</title>
 		<guid>${item.id}</guid>
 		<link>https://work.ivy.direct/project/${item.id}</link>
-		<source>https://work.ivy.direct/project/${item.id}</source>
+		<source url="https://work.ivy.direct/project/${item.id}">Ivy Direct - ${item.name}</source>
 		<description>${item.descriptionLong || item.description}</description>
 	</item>`;
 }).join('') +
