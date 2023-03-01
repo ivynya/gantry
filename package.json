@@ -31,6 +31,7 @@
 	},
 	"type": "module",
 	"dependencies": {
-		"marked": "^4.2.12"
+		"marked": "^4.2.12",
+		"sass": "^1.58.3"
 	}
 }
