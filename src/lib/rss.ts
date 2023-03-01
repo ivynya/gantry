@@ -27,6 +27,11 @@ export async function generateRSS(array: any[]) {
 
 <channel>
   <title>Ivy Direct</title>
+  <image>
+    <url>https://work.ivy.direct/feed.png</url>
+    <title>Ivy Direct</title>
+    <link>https://ivy.direct</link>
+  </image>
   <link>https://ivy.direct</link>
   <description>The latest updates, work, and more from Ivy's engineering portfolio.</description>`;
 
