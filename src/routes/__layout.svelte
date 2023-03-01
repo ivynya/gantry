@@ -3,6 +3,7 @@
 <style global>
 	html {
 		font-family: greycliff-cf, sans-serif;
+		font-size: 14px;
 	}
 	section {
 		flex: 1 1;
@@ -24,7 +25,7 @@
 		border-radius: 3px;
 		box-sizing: border-box;
 		font-family: inherit;
-		font-size: 0.6rem;
+		font-size: 0.8rem;
 		letter-spacing: 1px;
 		text-transform: uppercase;
 		margin: 0;
