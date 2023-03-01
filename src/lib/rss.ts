@@ -45,7 +45,7 @@ async function generateRSSItem(item: any) {
   <link>https://work.ivy.direct/project/${item.id}</link>
   <source url="https://work.ivy.direct/project/${item.id}">Ivy Direct - ${item.name}</source>
   <description>${item.descriptionLong || item.description}</description>
-  <content:encoded><![CDATA[${await getREADME(item)}]]></content>
+  <content:encoded><![CDATA[${await getREADME(item)}]]></content:encoded>
   <pubDate>${item.upDate}</pubDate>
 </item>`;
 }
