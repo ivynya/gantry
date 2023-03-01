@@ -32,9 +32,8 @@ export async function generateRSS(array: any[]) {
 for (const item of array)
   xml += await generateRSSItem(item);
 
-return xml +
-`</channel>
-</rss>`;
+  xml += `</channel></rss>`;
+  return xml.replaceAll(" & ", " &amp; ");
 }
 
 async function generateRSSItem(item: any) {
