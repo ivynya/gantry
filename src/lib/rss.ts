@@ -22,7 +22,7 @@ async function getREADME(e: any, s = 0): Promise<string> {
 
 export async function generateRSS(array: any[]) {
   let xml = `<?xml version="1.0" encoding="UTF-8" ?>
-<rss version="2.0">
+<rss version="2.0" xmlns:content="http://purl.org/rss/1.0/modules/content/">
 
 <channel>
   <title>Ivy Direct</title>
