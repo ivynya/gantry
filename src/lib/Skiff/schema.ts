@@ -9,6 +9,7 @@ export let example = writable({
   "descriptionLong": "string",
   "startDate": "string",
   "endDate": "string",
+  "upDate": "string",
   "tags": "array",
 
   "license": "array",

@@ -1,28 +1,15 @@
 <script lang="ts">
 	import { example } from '$lib/Skiff/schema';
+	import { generateRSS } from './rss';
 	export let array: any[];
 
 	// Generate output
 	$: json = JSON.stringify(array, null, 2);
-	$: rss =
-`<?xml version="1.0" encoding="UTF-8" ?>
-<rss version="2.0">
+	let rss = "";
 
-<channel>
-	<title>Ivy Direct</title>
-	<link>https://ivy.direct</link>
-	<description>The latest updates, work, and more from Ivy's engineering portfolio.</description>` + 
-array.map((item) => { return `
-	<item>
-		<title>${item.name}</title>
-		<guid>${item.id}</guid>
-		<link>https://work.ivy.direct/project/${item.id}</link>
-		<source url="https://work.ivy.direct/project/${item.id}">Ivy Direct - ${item.name}</source>
-		<description>${item.descriptionLong || item.description}</description>
-	</item>`;
-}).join('') +
-`</channel>
-</rss>`;
+	async function triggerGenerateRSS() {
+		rss = await generateRSS(array);
+	}
 
 	$: properties = Object.keys($example).map((key) => {
 		return { name: key, type: $example[key] };
@@ -33,6 +20,8 @@ array.map((item) => { return `
 	<h2>JSON Output</h2>
 	<textarea bind:value={json} />
 	<h2>RSS Output</h2>
+	<button on:click={triggerGenerateRSS}>Generate RSS</button>
+	<br><br>
 	<textarea bind:value={rss} />
 	<h2>View Schema</h2>
 	{#each properties as prop}
