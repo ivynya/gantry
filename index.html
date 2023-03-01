@@ -8,11 +8,11 @@
 		<meta http-equiv="content-security-policy" content="">
 	<link rel="stylesheet" href="/gantry/_app/immutable/assets/pages/__layout.svelte-2828db6b.css">
 	<link rel="stylesheet" href="/gantry/_app/immutable/assets/pages/index.svelte-4c5f5e5d.css">
-	<link rel="modulepreload" href="/gantry/_app/immutable/start-c6a1b4a5.js">
+	<link rel="modulepreload" href="/gantry/_app/immutable/start-67fcfe54.js">
 	<link rel="modulepreload" href="/gantry/_app/immutable/chunks/index-88db943d.js">
 	<link rel="modulepreload" href="/gantry/_app/immutable/chunks/index-11897261.js">
 	<link rel="modulepreload" href="/gantry/_app/immutable/pages/__layout.svelte-e8c80aca.js">
-	<link rel="modulepreload" href="/gantry/_app/immutable/pages/index.svelte-16ff40c3.js">
+	<link rel="modulepreload" href="/gantry/_app/immutable/pages/index.svelte-454dab53.js">
 	</head>
 	<body>
 		<div>
@@ -50,6 +50,9 @@
 		</div><div class="svelte-1aq5ohz"><label for="" class="svelte-1aq5ohz">endDate</label>
 			<input type="text" class="svelte-1aq5ohz">
 			
+		</div><div class="svelte-1aq5ohz"><label for="" class="svelte-1aq5ohz">upDate</label>
+			<input type="text" class="svelte-1aq5ohz">
+			
 		</div><div class="svelte-1aq5ohz"><label for="" class="svelte-1aq5ohz">tags</label>
 			
 			<input type="text" value="" class="svelte-1aq5ohz">
@@ -77,21 +80,9 @@
   }
 ]</textarea>
 	<h2>RSS Output</h2>
-	<textarea class="svelte-x11mmw"><?xml version="1.0" encoding="UTF-8" ?>
-<rss version="2.0">
-
-<channel>
-	<title>Ivy Direct</title>
-	<link>https://ivy.direct</link>
-	<description>The latest updates, work, and more from Ivy's engineering portfolio.</description>
-	<item>
-		<title>undefined</title>
-		<guid>1</guid>
-		<link>https://work.ivy.direct/project/1</link>
-		<source url="https://work.ivy.direct/project/1">Ivy Direct - undefined</source>
-		<description>undefined</description>
-	</item></channel>
-</rss></textarea>
+	<button>Generate RSS</button>
+	<br><br>
+	<textarea class="svelte-x11mmw"></textarea>
 	<h2>View Schema</h2>
 	<div class="property svelte-x11mmw"><input type="text" name="sc-name-1" id="sc-name-1" placeholder="Property Name" value="id" class="svelte-x11mmw">
 		<select name="sc-type-1" id="sc-type-1" value="string" class="svelte-x11mmw"><option value="string">String</option><option value="boolean">Bool</option><option value="array">Array</option></select>
@@ -106,6 +97,8 @@
 	</div><div class="property svelte-x11mmw"><input type="text" name="sc-name-1" id="sc-name-1" placeholder="Property Name" value="startDate" class="svelte-x11mmw">
 		<select name="sc-type-1" id="sc-type-1" value="string" class="svelte-x11mmw"><option value="string">String</option><option value="boolean">Bool</option><option value="array">Array</option></select>
 	</div><div class="property svelte-x11mmw"><input type="text" name="sc-name-1" id="sc-name-1" placeholder="Property Name" value="endDate" class="svelte-x11mmw">
+		<select name="sc-type-1" id="sc-type-1" value="string" class="svelte-x11mmw"><option value="string">String</option><option value="boolean">Bool</option><option value="array">Array</option></select>
+	</div><div class="property svelte-x11mmw"><input type="text" name="sc-name-1" id="sc-name-1" placeholder="Property Name" value="upDate" class="svelte-x11mmw">
 		<select name="sc-type-1" id="sc-type-1" value="string" class="svelte-x11mmw"><option value="string">String</option><option value="boolean">Bool</option><option value="array">Array</option></select>
 	</div><div class="property svelte-x11mmw"><input type="text" name="sc-name-1" id="sc-name-1" placeholder="Property Name" value="tags" class="svelte-x11mmw">
 		<select name="sc-type-1" id="sc-type-1" value="array" class="svelte-x11mmw"><option value="string">String</option><option value="boolean">Bool</option><option value="array">Array</option></select>
@@ -124,10 +117,10 @@
 </main>
 
 
-		<script type="module" data-sveltekit-hydrate="1d2ieyg">
-		import { start } from "/gantry/_app/immutable/start-c6a1b4a5.js";
+		<script type="module" data-sveltekit-hydrate="lg34lu">
+		import { start } from "/gantry/_app/immutable/start-67fcfe54.js";
 		start({
-			target: document.querySelector('[data-sveltekit-hydrate="1d2ieyg"]').parentNode,
+			target: document.querySelector('[data-sveltekit-hydrate="lg34lu"]').parentNode,
 			paths: {"base":"/gantry","assets":"/gantry"},
 			session: {},
 			route: true,
