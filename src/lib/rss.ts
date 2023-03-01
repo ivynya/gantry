@@ -20,6 +20,7 @@ async function getREADME(e: any, s = 0): Promise<string> {
   return marked.parse(await md_res.text());
 }
 
+// Generates an RSS channel from an array of projects
 export async function generateRSS(array: any[]) {
   let xml = `<?xml version="1.0" encoding="UTF-8" ?>
 <rss version="2.0" xmlns:content="http://purl.org/rss/1.0/modules/content/">
@@ -29,13 +30,15 @@ export async function generateRSS(array: any[]) {
   <link>https://ivy.direct</link>
   <description>The latest updates, work, and more from Ivy's engineering portfolio.</description>`;
 
-for (const item of array)
-  xml += await generateRSSItem(item);
+  for (const item of array)
+    xml += await generateRSSItem(item);
 
   xml += `</channel></rss>`;
   return xml.replaceAll(" & ", " &amp; ");
 }
 
+// Generates an RSS item from a project
+// Will fetch README.md from local files or GitHub if available
 async function generateRSSItem(item: any) {
   return `
 <item>
