@@ -10,6 +10,8 @@
     <input type="text" bind:value={item["plugins"]["github"]} placeholder="github">
     <input type="text" bind:value={item["plugins"]["link"]} placeholder="link">
     <input type="text" bind:value={item["plugins"]["embed"]} placeholder="embed">
+    <input type="text" bind:value={item["plugins"]["merch"]} placeholder="merch">
+    <input type="text" bind:value={item["plugins"]["download"]} placeholder="download">
   </div>
 </div>
 
