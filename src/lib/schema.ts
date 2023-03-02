@@ -14,12 +14,7 @@ export let example = writable({
 
   "license": "array",
 
-  /*"plugins": {
-    "embed"?: string,
-    "github"?: string,
-    "link"?: string,
-    "merch"?: string,
-  },*/
+  "plugins": "object",
 
   "pastPositions": "array",
 

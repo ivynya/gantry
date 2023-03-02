@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { example } from '$lib/Skiff/schema';
+	import { example } from '$lib/schema';
 	import EditorDisplay from './EditorDisplay.svelte';
 	import EditorMain from './EditorMain.svelte';
 	import EditorPlugins from './EditorPlugins.svelte';

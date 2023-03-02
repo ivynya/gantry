@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { example } from '$lib/Skiff/schema';
+	import { example } from '$lib/schema';
 	import { generateRSS } from './rss';
 	export let array: any[];
 
@@ -31,6 +31,7 @@
 			<option value="string">String</option>
 			<option value="boolean">Bool</option>
 			<option value="array">Array</option>
+			<option value="object">Object</option>
 		</select>
 	</div>
 	{/each}
