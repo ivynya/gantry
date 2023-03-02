@@ -6,7 +6,7 @@
 	export let array: any[];
 	export let view: number;
 
-	let specialProperties = ["id", "name", "organization", "description", "startDate", "endDate", "upDate", "display", "tags", "license", "old" ]
+	let specialProperties = ["id", "name", "organization", "description", "startDate", "endDate", "upDate", "display", "tags", "license", "old", "plugins" ]
 
 	function x(ev: Event, i: number) {
 		array[view][Object.keys($example)[i]] = ev?.target?.value?.split(',');
@@ -39,9 +39,6 @@
 					value={array[view][Object.keys($example)[i]]?.join(',') || ''}
 					on:change={(e) => x(e, i)}
 				/>
-			{/if}
-			{#if $example[key] === 'boolean'}
-				<input type="checkbox" name="" id="" checked={true}>
 			{/if}
 		</div>
 		{/if}
