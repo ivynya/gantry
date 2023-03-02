@@ -1,26 +1,21 @@
 # GANTRY
 
-Gantry is a super half-baked visual JSON editor for lists of JSON items. It is particularly to generate JSON files for my **port**folio website (get it? because gantry cranes load cargo at ports).
+Gantry is a custom JSON editor for Ivy Direct, my comprehensive portfolio experience. It enables editing and creating complex project metadata that I work with in a visual way, supporting future expansions, plugins, and more as well. It also statically generates the full-text RSS feed for Ivy Direct - which you can subscribe to at [work.ivy.direct/feed](https://work.ivy.direct/feed).
 
-It probably won't really ever be fixed by me. See #Contributing.
+A previous version of this README stated that I would likely never come back to fix the issues in Gantry. I have since come back to fix the issues in Gantry.
 
-## ~~Good~~ Features&trade;
-- Visual list of JSON items, with ability to specify which property is the title
-- Editable properties (which are all strings)
-- Editable arrays (which are all string arrays)
-- Editable schema (between strings and string arrays)
-- Restore JSON list from clipboard
+## Features
+- Visual list of JSON items, with ability to specify overview property
+- Editable properties with pseudo-simulated result view
+- Generate full-text RSS feed from GitHub plugin and Ivy Direct Markdown
+- Restore JSON list from online catalog
+- Supports arbitrary future expansions and plugins of schema
 
-## Contributing
+## Contributing and Usage
 
-Gantry has the following issues that don't impact me.
+Gantry, while technically functioning as a separate app, is tightly-coupled to Ivy Direct source code and thus is really only useful for editing Ivy Direct metadata. Ivy Direct source code is available as sponsorware in a separate repository. If you are interested in using the Gantry architecture for your own portfolio, feel free to! I would love to see what you do with it.
 
-- Only supports lists of JSON items, not an object with keys as the top level
-- Property title filtering only looks at keys for the first element in the list
-- Schema editing is super moldy (and doesn't restore from clipboard)
-- Doesn't support anything other than strings (and string arrays) in JSON objects
-
-PRs are welcome for these issues (and others, if you want).
+PRs are welcome for issues in general.
 
 ## Gallery
 
