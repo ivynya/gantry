@@ -1,3 +1,4 @@
+<h1>Direct Internal - Gantry</h1>
 <slot />
 
 <style global>
@@ -9,6 +10,14 @@
 		flex: 1 1;
 		max-width: calc(26vw);
 		width: 100%;
+	}
+	h1 {
+		font-family: "cartograph-cf", sans-serif;
+		font-size: 2rem;
+		font-weight: 700;
+		margin: 30px 25px;
+		margin-bottom: 0;
+		text-transform: uppercase;
 	}
 	h2,
 	h3 {
