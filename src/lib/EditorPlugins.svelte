@@ -7,11 +7,15 @@
     <h3>Plugins</h3>
   </div>
   <div>
+    {#if item["plugins"]}
     <input type="text" bind:value={item["plugins"]["github"]} placeholder="github">
     <input type="text" bind:value={item["plugins"]["link"]} placeholder="link">
     <input type="text" bind:value={item["plugins"]["embed"]} placeholder="embed">
     <input type="text" bind:value={item["plugins"]["merch"]} placeholder="merch">
     <input type="text" bind:value={item["plugins"]["download"]} placeholder="download">
+    {:else}
+    <button on:click={() => { item["plugins"] = {}}}>Create Plugins</button>
+    {/if}
   </div>
 </div>
 

@@ -44,9 +44,6 @@
 		resize: vertical;
 		text-transform: none;
 	}
-	.in {
-		min-height: 150px;
-	}
 
 	.property {
 		display: flex;
