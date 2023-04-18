@@ -1,4 +1,3 @@
-<h1>Direct Internal - Gantry</h1>
 <slot />
 
 <style global>

@@ -17,9 +17,11 @@
 </script>
 
 <section>
-	<h2>Editing Item: <b>{view}</b></h2>
-	<button on:click={up}>Set Update to Today</button>
-	<hr><br>
+	<span>
+		Editing item {view}
+		<button on:click={up}>Set Update to Today</button>
+	</span>
+	<hr><br><br>
 	<EditorMain bind:item={array[view]} />
 	<br>
 	<EditorDisplay bind:item={array[view]} />
@@ -50,6 +52,17 @@
 		flex: 1.5 1;
 		max-width: none;
 		margin: 0 5vw;
+	}
+
+	span {
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+		justify-content: space-between;
+		column-gap: 25px;
+		text-transform: uppercase;
+		font-weight: 300;
+		letter-spacing: 2px;
 	}
 
 	label {

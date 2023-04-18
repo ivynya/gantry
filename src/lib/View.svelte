@@ -4,6 +4,7 @@
 	export let view: number;
 	let prop = -1;
 	$: key = array[0] && prop != -1 ? Object.keys(array[0])[prop] : 'gantry--default';
+	let old = false;
 
 	const add = () => {
 		array.push({});
@@ -19,25 +20,45 @@
 </script>
 
 <section>
-	<h2>View</h2>
 	<button on:click={add}>New Item</button>
 	<button on:click={webRestore}>Restore From Catalog</button>
 	<hr />
-	<span>View by:</span>
-	<select bind:value={prop}>
-		<option value={-1}>Stringify</option>
-		{#each Object.keys(array[0]) as key, i}
-			<option value={i}>{key}</option>
-		{/each}
-	</select>
+	<span>View:
+		<select bind:value={prop}>
+			<option value={-1}>Default</option>
+			{#each Object.keys(array[0]) as key, i}
+				<option value={i}>{key}</option>
+			{/each}
+		</select>
+	</span>
+	<span>Include Old
+		<input type="checkbox" bind:checked={old} />
+	</span>
+	<br><br>
 	{#each array as item, i}
+		{#if old || (!old && !item.old)}
 		<ViewItem on:click={() => (view = i)} bind:item {i} active={view === i} {key} />
+		{/if}
 	{/each}
 </section>
 
 <style>
+	span {
+		background-color: #70809022;
+		border-radius: 3px;
+		display: inline-flex;
+		flex-direction: row;
+		align-items: center;
+		column-gap: 5px;
+		padding: 2px 5px;
+	}
+
 	select {
+		background-color: transparent;
 		margin-left: 5px;
-		margin-bottom: 10px;
+	}
+
+	input[type='checkbox'] {
+		appearance: auto;
 	}
 </style>

@@ -34,7 +34,7 @@
   <div class="row">
     <input type="text" value={item["tags"]?.join(',') || ''} on:change={(e) => y(e, "tags")}>
     <span class="spacer"></span>
-    <input type="text" value={item["license"]?.join(',') || ''} on:change={(e) => y(e, "license")}>
+    <input type="text" value={item["license"]?.join(',') || ''} on:change={(e) => y(e, "license")} placeholder="no license">
   </div>
 </div>
 
