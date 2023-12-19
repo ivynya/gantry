@@ -63,7 +63,7 @@ We couldn't find a file for this project.`;const l=await fetch(t[e]);return l.ok
 <channel>
   <title>Ivy Direct</title>
   <image>
-    <url>https://work.ivy.direct/feed.png</url>
+    <url>https://ivy.direct/feed.png</url>
     <title>Ivy Direct</title>
     <link>https://ivy.direct</link>
   </image>
@@ -72,8 +72,8 @@ We couldn't find a file for this project.`;const l=await fetch(t[e]);return l.ok
 <item>
   <title>${r.name}</title>
   <guid>${r.id}</guid>
-  <link>https://work.ivy.direct/project/${r.id}</link>
-  <source url="https://work.ivy.direct/project/${r.id}">Ivy Direct - ${r.name}</source>
+  <link>https://ivy.direct/project/${r.id}</link>
+  <source url="https://ivy.direct/project/${r.id}">Ivy Direct - ${r.name}</source>
   <description>${r.descriptionLong||r.description}</description>
   <content:encoded><![CDATA[${await Dt(r)}]]></content:encoded>
   <pubDate>${r.upDate}</pubDate>
