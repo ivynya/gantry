@@ -11,7 +11,7 @@
   <div class="header">
     <span><span class="dot green" /><span class="dot red" /></span>
     <span class="search">
-      https://work.ivy.direct/project/
+      https://ivy.direct/project/
       <input type="text" bind:value={item["id"]}>
     </span>
   </div>
