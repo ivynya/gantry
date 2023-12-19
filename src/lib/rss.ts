@@ -28,7 +28,7 @@ export async function generateRSS(array: any[]) {
 <channel>
   <title>Ivy Direct</title>
   <image>
-    <url>https://work.ivy.direct/feed.png</url>
+    <url>https://ivy.direct/feed.png</url>
     <title>Ivy Direct</title>
     <link>https://ivy.direct</link>
   </image>
@@ -49,8 +49,8 @@ async function generateRSSItem(item: any) {
 <item>
   <title>${item.name}</title>
   <guid>${item.id}</guid>
-  <link>https://work.ivy.direct/project/${item.id}</link>
-  <source url="https://work.ivy.direct/project/${item.id}">Ivy Direct - ${item.name}</source>
+  <link>https://ivy.direct/project/${item.id}</link>
+  <source url="https://ivy.direct/project/${item.id}">Ivy Direct - ${item.name}</source>
   <description>${item.descriptionLong || item.description}</description>
   <content:encoded><![CDATA[${await getREADME(item)}]]></content:encoded>
   <pubDate>${item.upDate}</pubDate>
