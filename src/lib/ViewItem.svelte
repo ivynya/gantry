@@ -1,21 +1,26 @@
 <script lang="ts">
-	export let active: boolean;
-	export let item: any;
-	export let i: number;
-	export let key: string;
+	interface Props {
+		click: () => void;
+		active: boolean;
+		item: any;
+		i: number;
+		key: string;
+	}
+
+	let { click, active, item = $bindable(), i, key }: Props = $props();
 </script>
 
-<button on:click class:active>
+<button onclick={click} class:active>
 	{#if key === 'gantry--default'}
-	<span>
-		<b>#{i}</b>
-		<code>{item.id}</code>
-	</span>
+		<span>
+			<b>#{i}</b>
+			<code>{item.id}</code>
+		</span>
 	{:else}
-	<span>
-		<b>{i}</b>:
-		{JSON.stringify(item[key])}
-	</span>
+		<span>
+			<b>{i}</b>:
+			{JSON.stringify(item[key])}
+		</span>
 	{/if}
 </button>
 
@@ -49,7 +54,7 @@
 			background-color: #0001;
 			border-radius: 5px;
 			font-size: 0.7rem;
-			font-family: "cartograph-cf", monospace;
+			font-family: 'cartograph-cf', monospace;
 			padding: 1px 6px;
 		}
 	}

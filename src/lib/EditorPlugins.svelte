@@ -1,5 +1,9 @@
 <script lang="ts">
-  export let item: { [key: string]: any };
+  interface Props {
+    item: { [key: string]: any };
+  }
+
+  let { item = $bindable() }: Props = $props();
 </script>
 
 <div class="plugins">
@@ -14,7 +18,7 @@
     <input type="text" bind:value={item["plugins"]["merch"]} placeholder="merch">
     <input type="text" bind:value={item["plugins"]["download"]} placeholder="download">
     {:else}
-    <button on:click={() => { item["plugins"] = {}}}>Create Plugins</button>
+    <button onclick={() => { item["plugins"] = {}}}>Create Plugins</button>
     {/if}
   </div>
 </div>

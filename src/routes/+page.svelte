@@ -3,8 +3,8 @@
 	import Editor from '$lib/Editor.svelte';
 	import Output from '$lib/Output.svelte';
 
-	let array: any[] = [{ id: 1 }];
-	let view = 0;
+	let array: any[] = $state([{ id: 1 }]);
+	let view = $state(0);
 </script>
 
 <main>

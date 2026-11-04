@@ -3,8 +3,12 @@
 	import EditorDisplay from './EditorDisplay.svelte';
 	import EditorMain from './EditorMain.svelte';
 	import EditorPlugins from './EditorPlugins.svelte';
-	export let array: any[];
-	export let view: number;
+	interface Props {
+		array: any[];
+		view: number;
+	}
+
+	let { array = $bindable(), view }: Props = $props();
 
 	let specialProperties = ["id", "name", "organization", "description", "startDate", "endDate", "upDate", "display", "tags", "license", "old", "plugins" ]
 
@@ -19,7 +23,7 @@
 <section>
 	<span>
 		Editing item {view}
-		<button on:click={up}>Set Update to Today</button>
+		<button onclick={up}>Set Update to Today</button>
 	</span>
 	<hr><br><br>
 	<EditorMain bind:item={array[view]} />
@@ -39,7 +43,7 @@
 				<input
 					type="text"
 					value={array[view][Object.keys($example)[i]]?.join(',') || ''}
-					on:change={(e) => x(e, i)}
+					onchange={(e) => x(e, i)}
 				/>
 			{/if}
 		</div>

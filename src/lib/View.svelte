@@ -1,10 +1,14 @@
 <script lang="ts">
 	import ViewItem from '$lib/ViewItem.svelte';
-	export let array: any[];
-	export let view: number;
-	let prop = -1;
-	$: key = array[0] && prop != -1 ? Object.keys(array[0])[prop] : 'gantry--default';
-	let old = false;
+	interface Props {
+		array: any[];
+		view: number;
+	}
+
+	let { array = $bindable(), view = $bindable() }: Props = $props();
+	let prop = $state(-1);
+	let key = $derived(array[0] && prop != -1 ? Object.keys(array[0])[prop] : 'gantry--default');
+	let old = $state(false);
 
 	const add = () => {
 		array.push({});
@@ -13,17 +17,18 @@
 	};
 
 	const webRestore = async () => {
-		const res = await fetch("https://portfolio-i362f.ondigitalocean.app/api/portfolio/catalog");
+		const res = await fetch('https://portfolio-i362f.ondigitalocean.app/api/portfolio/catalog');
 		const data = await res.json();
 		array = data;
-	}
+	};
 </script>
 
 <section>
-	<button on:click={add}>New Item</button>
-	<button on:click={webRestore}>Restore From Catalog</button>
+	<button onclick={add}>New Item</button>
+	<button onclick={webRestore}>Restore From Catalog</button>
 	<hr />
-	<span>View:
+	<span
+		>View:
 		<select bind:value={prop}>
 			<option value={-1}>Default</option>
 			{#each Object.keys(array[0]) as key, i}
@@ -31,13 +36,14 @@
 			{/each}
 		</select>
 	</span>
-	<span>Include Old
+	<span
+		>Include Old
 		<input type="checkbox" bind:checked={old} />
 	</span>
-	<br><br>
+	<br /><br />
 	{#each array as item, i}
 		{#if old || (!old && !item.old)}
-		<ViewItem on:click={() => (view = i)} bind:item {i} active={view === i} {key} />
+			<ViewItem click={() => (view = i)} bind:item={array[i]} {i} active={view === i} {key} />
 		{/if}
 	{/each}
 </section>

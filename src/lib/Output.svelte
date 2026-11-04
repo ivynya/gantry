@@ -1,28 +1,32 @@
 <script lang="ts">
 	import { example } from '$lib/schema';
 	import { generateRSS } from './rss';
-	export let array: any[];
+	interface Props {
+		array: any[];
+	}
+
+	let { array }: Props = $props();
 
 	// Generate output
-	$: json = JSON.stringify(array, null, 2);
-	let rss = "";
+	let json = $derived(JSON.stringify(array, null, 2));
+	let rss = $state("");
 
 	async function triggerGenerateRSS() {
 		rss = await generateRSS(array);
 	}
 
-	$: properties = Object.keys($example).map((key) => {
+	let properties = $derived(Object.keys($example).map((key) => {
 		return { name: key, type: $example[key] };
-	});
+	}));
 </script>
 
 <section>
 	<h2>JSON Output</h2>
-	<textarea bind:value={json} />
+	<textarea bind:value={json}></textarea>
 	<h2>RSS Output</h2>
-	<button on:click={triggerGenerateRSS}>Generate RSS</button>
+	<button onclick={triggerGenerateRSS}>Generate RSS</button>
 	<br><br>
-	<textarea bind:value={rss} />
+	<textarea bind:value={rss}></textarea>
 	<h2>View Schema</h2>
 	{#each properties as prop}
 	<div class="property">
