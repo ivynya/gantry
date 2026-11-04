@@ -1,24 +1,24 @@
-import { writable } from "svelte/store";
+import { writable } from 'svelte/store';
 
 export let example = writable({
-  "id": "string",
-  "name": "string",
-  "organization": "string",
+	id: 'string',
+	name: 'string',
+	organization: 'string',
 
-  "description": "string",
-  "descriptionLong": "string",
-  "startDate": "string",
-  "endDate": "string",
-  "upDate": "string",
-  "tags": "array",
+	description: 'string',
+	descriptionLong: 'string',
+	startDate: 'string',
+	endDate: 'string',
+	upDate: 'string',
+	tags: 'array',
 
-  "license": "array",
+	license: 'array',
 
-  "plugins": "object",
+	plugins: 'object',
 
-  "pastPositions": "array",
+	pastPositions: 'array',
 
-  "display": "string",
-  "old": "boolean",
-  "type": "array"
+	display: 'string',
+	old: 'boolean',
+	type: 'array'
 });

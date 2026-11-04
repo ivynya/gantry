@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { example } from '$lib/schema';
+	import { example } from '#lib/schema.js';
 	import { generateRSS } from './rss';
 	interface Props {
 		array: any[];

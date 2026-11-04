@@ -5,6 +5,7 @@ Gantry is a custom JSON editor for Ivy Direct, my comprehensive portfolio experi
 A previous version of this README stated that I would likely never come back to fix the issues in Gantry. I have since come back to fix the issues in Gantry.
 
 ## Features
+
 - Visual list of JSON items, with ability to specify overview property
 - Editable properties with pseudo-simulated result view
 - Generate full-text RSS feed from GitHub plugin and Ivy Direct Markdown
@@ -27,6 +28,6 @@ Demo of Property Title Filter:
 
 <img width="309" alt="image" src="https://user-images.githubusercontent.com/35588499/173224297-4f34b0c7-ebc6-4038-9f57-64f667a33ba8.png">
 
-
 ## License
+
 MIT

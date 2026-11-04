@@ -1,7 +1,7 @@
 <script lang="ts">
-	import View from '$lib/View.svelte';
-	import Editor from '$lib/Editor.svelte';
-	import Output from '$lib/Output.svelte';
+	import View from '#lib/View.svelte';
+	import Editor from '#lib/Editor.svelte';
+	import Output from '#lib/Output.svelte';
 
 	let array: any[] = $state([{ id: 1 }]);
 	let view = $state(0);

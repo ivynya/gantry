@@ -1,5 +1,5 @@
 <script lang="ts">
-	import ViewItem from '$lib/ViewItem.svelte';
+	import ViewItem from '#lib/ViewItem.svelte';
 	interface Props {
 		array: any[];
 		view: number;

@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { example } from '$lib/schema';
+	import { example } from '#lib/schema.js';
 	import EditorDisplay from './EditorDisplay.svelte';
 	import EditorMain from './EditorMain.svelte';
 	import EditorPlugins from './EditorPlugins.svelte';
